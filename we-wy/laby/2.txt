@@ -1,0 +1,81 @@
+//Pobieranie znakow, az 3 $
+Petla:  WPR 1
+        ODE Znak_$
+        SOZ Zwieksz_licznik
+        DOD Znak_$
+
+        ODE ZNAK_C
+        SOM Petla
+        DOD ZNAK_C
+        ODE ZNAK_K
+        ODE Jedynka
+        SOM Do_tablicy
+        SOB Petla
+
+Do_tablicy: DOD ZNAK_K
+        DOD Jedynka    
+rozkaz: ŁAD Tablica
+        POB N
+        DOD Jedynka
+        ŁAD N
+        POB rozkaz
+        DOD Jedynka
+        ŁAD rozkaz
+        SOB Petla
+
+Zwieksz_licznik: POB Licznik
+        ODE Jedynka
+        SOZ Koniec
+        ŁAD Licznik
+        SOB Petla
+        Koniec: POB N
+        SDP Pisz_liczba
+        STP
+        
+Pisz_liczba: ŁAD Liczba
+PZS
+ŁAD slad
+ODE slad
+DNS
+POB Liczba
+
+Kolejna: DZI L10
+MNO L10
+ŁAD Temp
+POB Liczba
+ODE Temp
+DOD Znak_0
+DNS
+ODE Znak_0
+POB Temp
+DZI L10
+ŁAD Liczba
+SOZ Wypisz
+SOB Kolejna
+
+Wypisz: PZS
+SOZ Zakoncz
+WYP 2
+SOB Wypisz
+
+Zakoncz: POB slad
+DNS
+PWR
+
+Liczba: RPA
+Temp: RPA
+slad: RPA
+L10: RST 10
+ZNAK_0: RST '0'
+
+
+Licznik: RST 3
+Znak_$: RST '$'
+Jedynka: RST 1
+
+Znak_C: RST 'C'
+Znak_K: RST 'K'
+
+
+N:       RST 0
+Tablica: RPA

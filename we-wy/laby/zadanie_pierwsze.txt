@@ -1,0 +1,31 @@
+//Pobieranie znakow, az do trzeciego $
+
+Petla: WPR 1
+
+ODE Znak$
+
+SOZ Zwieksz_licznik
+
+SOB Petla
+
+
+
+Zwieksz_licznik: POB Licznik
+
+ODE Jedynka
+
+SOZ Koniec
+
+ŁAD Licznik
+
+SOB Petla
+
+Koniec: STP
+
+
+
+Licznik: RST 3
+
+Znak$: RST '$'
+
+Jedynka: RST 1

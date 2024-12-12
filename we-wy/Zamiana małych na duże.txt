@@ -1,0 +1,37 @@
+//Zamiana małych na duże
+POB Korekta
+ODE ZNAK_a 
+//Liczba bedzie ujemna, wiec bedziemy dodawac
+ŁAD Korekta
+
+POB Ilosc_znakow
+DOD ZNAK_z
+ODE ZNAK_a
+ŁAD Ilosc_znakow
+
+Petla: WPR 1
+ODE Spacja
+SOZ Koniec
+DOD Spacja
+
+ODE ZNAK_a
+SOM Pisz
+ODE Ilosc_znakow
+SOM Zamien
+DOD Ilosc_znakow
+SOB Pisz
+
+Zamien:
+DOD Ilosc_znakow
+DOD Korekta
+//Dodajemy koretke, bo jest ona ujemna
+Pisz: DOD ZNAK_a
+WYP 2
+SOB Petla
+Koniec: STP
+
+Spacja: RST ' '
+ZNAK_a: RST 'a'
+ZNAK_z: RST 'z'
+Ilosc_znakow: RST 1
+Korekta: RST 'A'

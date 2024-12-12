@@ -1,0 +1,25 @@
+//wypisuje wszystko oprócz dużych liter
+POB ZZ
+ODE ZA
+DOD Jedynka
+ŁAD LA-Z
+Petla: WPR 1
+ODE ZSpacja
+SOZ Koniec
+DOD ZSpacja
+
+ODE ZA
+SOM Wyswietl
+ODE LA-Z
+SOM Petla
+DOD LA-Z
+Wyswietl: DOD ZA
+WYP 2
+SOB Petla
+Koniec: STP
+
+ZA: RST 'A'
+ZZ: RST 'Z'
+LA-Z: RPA
+ZSpacja: RST 32
+Jedynka: RST 1

@@ -1,0 +1,82 @@
+//program wczytujący dwie liczby naturalne i wypisujący większą z nich.
+SDP Czytaj
+PZS
+ŁAD N
+SDP Czytaj
+PZS
+ODE N
+SOM przywroc
+POB N
+SOB wyswietl
+przywroc: DOD N
+
+wyswietl: DNS
+SDP Pisz
+STP
+
+N: RPA
+
+Czytaj: PZS
+ŁAD slad
+POB Liczba
+ODE Liczba
+ŁAD Liczba
+
+Petla: WPR 1
+ODE Spacja
+SOZ Koniec
+DOD Spacja
+ODE ZNAK_0
+ŁAD Cyfra
+POB Liczba
+MNO L10
+DOD Cyfra
+ŁAD Liczba
+SOB Petla
+
+Koniec: POB Liczba
+DNS
+POB slad
+DNS
+PWR
+
+slad: RPA
+Spacja: RST 32
+ZNAK_0: RST '0'
+Liczba: RPA
+Cyfra: RPA
+L10: RST 10
+
+Pisz: PZS
+ŁAD slad2
+PZS 
+ŁAD Liczba2
+ODE Liczba2
+DNS
+DOD Liczba2
+
+Petla2: SOZ Koniec5
+DZI L10-2
+MNO L10-2
+ŁAD temp
+POB Liczba2
+ODE temp
+DOD ZNAK_0-2
+DNS
+POB temp
+DZI L10-2
+ŁAD Liczba2
+SOB Petla2
+Koniec5: PZS
+SOZ Zakoncz
+WYP 2
+SOB Koniec5
+Zakoncz: POB slad2
+DNS
+PWR
+
+slad2: RPA
+Liczba2: RPA
+temp: RPA
+L10-2: RST 10
+ZNAK_0-2: RST '0'

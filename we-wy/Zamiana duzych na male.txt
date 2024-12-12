@@ -1,0 +1,35 @@
+//Zamiana duzych na male
+POB Korekta
+ODE ZNAK_A 
+ŁAD Korekta
+
+POB Ilosc_znakow
+DOD ZNAK_Z
+ODE ZNAK_A
+ŁAD Ilosc_znakow
+
+Petla: WPR 1
+ODE Spacja
+SOZ Koniec
+DOD Spacja
+
+ODE ZNAK_A
+SOM Pisz
+ODE Ilosc_znakow
+SOM Zamien
+DOD Ilosc_znakow
+SOB Pisz
+
+Zamien:
+DOD Ilosc_znakow
+DOD Korekta
+Pisz: DOD ZNAK_A
+WYP 2
+SOB Petla
+Koniec: STP
+
+Spacja: RST ' '
+ZNAK_A: RST 'A'
+ZNAK_Z: RST 'Z'
+Ilosc_znakow: RST 1
+Korekta: RST 'a'

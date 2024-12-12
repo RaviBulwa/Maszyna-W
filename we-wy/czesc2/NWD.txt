@@ -1,0 +1,89 @@
+        SDP Read
+        DNS
+        SDP Read
+        DNS
+        SDP nwd
+        PZS
+        SDP Write
+        STP
+
+nwd:    PZS
+        ŁAD slad
+        PZS
+        ŁAD B
+        PZS
+        ŁAD A
+
+Petla:   POB A
+         ODE B
+         SOZ Koniec
+         SOM ujemna
+         ŁAD A
+         SOB Petla
+ujemna:  POB B
+         ODE A
+         ŁAD B
+         SOB Petla
+Koniec:  POB A
+         DNS
+         POB slad
+         DNS
+         PWR
+
+
+A:       RPA
+B:       RPA
+slad:    RPA
+
+Write:  ŁAD Number
+        POB Zero
+        DNS
+        POB Number
+        SOM Abs
+Posit:  DZI Ten
+        MNO Ten
+        ŁAD Tmp
+        POB Number
+        ODE Tmp
+        DOD Char0
+        DNS
+        POB Tmp
+        DZI Ten
+        SOZ End
+        ŁAD Number
+        SOB Posit
+Abs:    POB Minus
+        WYP 2
+        POB Zero
+        ODE Number
+        ŁAD Number
+        SOB Posit
+End:    PZS
+        SOZ GoBack
+        WYP 2
+        SOB End
+GoBack: PWR
+
+Zero:   RST 0
+Number: RPA
+Tmp:    RPA
+Ten:    RST 10
+Char0:  RST '0'
+Minus:  RST 45             
+        
+Read:   POB Zero
+Next:   ŁAD Number
+        WPR 1
+        ODE Char0
+        SOM Ready
+        ODE Ten
+        SOM Skip
+Ready:  POB Number
+        PWR
+Skip:   DOD Ten
+        ŁAD Digit
+        POB Number
+        MNO Ten
+        DOD Digit
+        SOB Next
+Digit:  RPA

@@ -1,0 +1,20 @@
+//Wczytuje znaki, wypisuje tylko liczby
+Petla: WPR 1
+ODE ZSpacja
+SOZ Koniec
+DOD ZSpacja
+ODE Z0
+SOM Petla
+ODE L10
+SOM Wyswietl
+SOB Petla
+Wyswietl:
+DOD Z0
+DOD L10
+WYP 2
+SOB Petla
+Koniec: STP
+
+Z0: RST '0'
+ZSpacja: RST 32
+L10: RST 10

@@ -1,0 +1,41 @@
+//program wczytujący dwie liczby naturalne i obliczający ich sumę
+SDP Czytaj
+PZS
+ŁAD N
+SDP Czytaj
+PZS
+DOD N
+STP
+
+N: RPA
+
+Czytaj: PZS
+ŁAD slad
+POB Liczba
+ODE Liczba
+ŁAD Liczba
+
+Petla: WPR 1
+ODE Spacja
+SOZ Koniec
+DOD Spacja
+ODE ZNAK_0
+ŁAD Cyfra
+POB Liczba
+MNO L10
+DOD Cyfra
+ŁAD Liczba
+SOB Petla
+
+Koniec: POB Liczba
+DNS
+POB slad
+DNS
+PWR
+
+slad: RPA
+Spacja: RST 32
+ZNAK_0: RST '0'
+Liczba: RPA
+Cyfra: RPA
+L10: RST 10

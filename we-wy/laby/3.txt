@@ -1,0 +1,161 @@
+//Pobieranie znakow, az 3 $
+Petla:  WPR 1
+        ODE Znak_$
+        SOZ Zwieksz_licznik
+        DOD Znak_$
+
+        ODE ZNAK_C
+        SOM Petla
+        DOD ZNAK_C
+        ODE ZNAK_K
+        ODE Jedynka
+        SOM Do_tablicy
+        SOB Petla
+
+Do_tablicy: DOD ZNAK_K
+        DOD Jedynka    
+rozkaz: ŁAD Tablica
+        POB N
+        DOD Jedynka
+        ŁAD N
+        POB rozkaz
+        DOD Jedynka
+        ŁAD rozkaz
+        SOB Petla
+
+Zwieksz_licznik: POB Licznik
+        ODE Jedynka
+        SOZ Koniec
+        ŁAD Licznik
+        SOB Petla
+        
+Koniec: POB N
+        SDP Pisz_liczba
+        POB L10
+        WYP 2
+        
+        POB Znak_G
+        DNS
+        POB N
+        DNS
+        SDP Policz_znak
+        POB L10
+        WYP 2
+        
+        POB Znak_K
+        DNS
+        POB N
+        DNS
+        SDP Policz_znak
+        POB L10
+        WYP 2
+        STP
+//podprogram1        
+Pisz_liczba: ŁAD Liczba
+             PZS
+             ŁAD slad
+             ODE slad
+             DNS
+             POB Liczba
+
+Kolejna:     DZI L10
+             MNO L10
+             ŁAD Temp
+             POB Liczba
+             ODE Temp
+             DOD Znak_0
+             DNS
+             ODE Znak_0
+             POB Temp
+             DZI L10
+             ŁAD Liczba
+             SOZ Wypisz
+             SOB Kolejna
+
+Wypisz:      PZS
+             SOZ Zakoncz
+             WYP 2
+             SOB Wypisz
+
+Zakoncz:     POB slad
+             DNS
+             PWR
+             
+Liczba: RPA
+Temp: RPA
+slad: RPA
+L10: RST 10
+ZNAK_0: RST '0'
+
+//podprogram2
+
+Policz_znak: PZS
+             ŁAD slad_2
+             ODE slad_2
+             ŁAD ilosc
+             PZS
+             ŁAD Dlugosc
+             PZS
+             ŁAD Wzorzec
+             WYP 2
+             POB Znak_dwukrop
+             WYP 2
+
+ Nastepny_krok: POB Dlugosc
+             ODE Jedynka_podpr
+             SOM Policzone
+             ŁAD Dlugosc
+             
+rozkaz_podpr: POB Tablica
+             ODE Wzorzec
+             SOZ Dodej
+Kontynuacja: POB rozkaz_podpr
+             DOD Jedynka_podpr
+             ŁAD rozkaz_podpr
+             SOB Nastepny_krok
+             
+Dodej:       POB ilosc
+             DOD Jedynka_podpr
+             ŁAD ilosc
+             SOB Kontynuacja
+
+Policzone:   POB ilosc
+             SDP Pisz_liczba
+             POB tablica_start
+             ŁAD rozkaz_podpr
+             POB slad_2
+             DNS
+             PWR
+
+slad_2: RPA
+Dlugosc: RPA
+Wzorzec: RPA
+Znak_dwukrop: RST ':'
+ilosc: RPA
+Jedynka_podpr: RST 1
+tablica_start: POB Tablica
+
+
+
+
+
+Licznik: RST 3
+Znak_$: RST '$'
+Jedynka: RST 1
+
+Znak_C: RST 'C'
+Znak_K: RST 'K'
+Znak_G: RST 'G'
+
+
+N:       RST 0
+Tablica: RST 0
+         RST 0
+         RST 0
+         RST 0
+         RST 0
+         RST 0
+         RST 0
+         RST 0
+         RST 0
+         

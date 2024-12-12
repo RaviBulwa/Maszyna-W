@@ -1,0 +1,23 @@
+//wypisuje tylko małe litery
+Petla: WPR 1
+ODE ZSpacja
+SOZ Koniec
+DOD ZSpacja
+ODE ZA
+SOM Petla
+DOD ZA
+ODE ZZ
+ODE Jedynka
+SOM Wyswietl
+SOB Petla
+Wyswietl:
+DOD ZZ
+DOD Jedynka
+WYP 2
+SOB Petla
+Koniec: STP
+
+ZA: RST 'a'
+ZZ: RST 'z'
+ZSpacja: RST 32
+Jedynka: RST 1
