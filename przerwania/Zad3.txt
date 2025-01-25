@@ -1,0 +1,148 @@
+SOB Program
+SOB PR1
+SOB PR2
+SOB PR3
+SOB PR4
+//-------------
+Program: POB znak
+Petla: WYP 2
+SOB Petla
+
+Koniec: STP
+
+znak: RST '@'
+ZERO: RST '0'
+Jeden: RST '1'
+Jedynka: RST 1   
+
+//-------------
+
+PR1: CZM Maska_1
+MAS 15
+DNS
+
+POB Liczba_1
+DOD Liczba_1
+DOD Liczba_1
+ŁAD i_1
+Petla_1: POB i_1
+SOZ Dalej_1
+ODE Jedynka
+ŁAD i_1
+POB Liczba_1
+DOD ZERO
+WYP 2
+SOB Petla_1
+
+Dalej_1: POB Zgloszen_1
+ODE Jedynka
+SOZ Koniec
+ŁAD Zgloszen_1
+
+PZS
+MSK Maska_1
+PWR
+
+Maska_1: RPA
+Liczba_1: RST 1
+i_1: RPA
+Zgloszen_1: RST 4
+
+//-------------
+
+PR2: CZM Maska_2
+MAS 7
+DNS
+
+POB Liczba_2
+DOD Liczba_2
+DOD Liczba_2
+ŁAD i_2
+Petla_2: POB i_2
+SOZ Dalej_2
+ODE Jedynka
+ŁAD i_2
+POB Liczba_2
+DOD ZERO
+WYP 2
+SOB Petla_2
+
+Dalej_2: POB Zgloszen_2
+ODE Jedynka
+SOZ Koniec
+ŁAD Zgloszen_2
+
+PZS
+MSK Maska_2
+PWR
+
+Maska_2: RPA
+Liczba_2: RST 2
+i_2: RPA
+Zgloszen_2: RST 4
+
+//-------------
+
+PR3: CZM Maska_3
+MAS 3
+DNS
+
+POB Liczba_3
+DOD Liczba_3
+DOD Liczba_3
+ŁAD i_3
+Petla_3: POB i_3
+SOZ Dalej_3
+ODE Jedynka
+ŁAD i_3
+POB Liczba_3
+DOD ZERO
+WYP 2
+SOB Petla_3
+
+Dalej_3: POB Zgloszen_3
+ODE Jedynka
+SOZ Koniec
+ŁAD Zgloszen_3
+
+PZS
+MSK Maska_3
+PWR
+
+Maska_3: RPA
+Liczba_3: RST 3
+i_3: RPA
+Zgloszen_3: RST 8
+
+//-------------
+
+PR4: CZM Maska_4
+MAS 1
+DNS
+
+POB Liczba_4
+DOD Liczba_4
+DOD Liczba_4
+ŁAD i_4
+Petla_4: POB i_4
+SOZ Dalej_4
+ODE Jedynka
+ŁAD i_4
+POB Liczba_4
+DOD ZERO
+WYP 2
+SOB Petla_4
+
+Dalej_4: POB Zgloszen_4
+ODE Jedynka
+SOZ Koniec
+ŁAD Zgloszen_4
+
+PZS
+MSK Maska_4
+PWR
+
+Maska_4: RPA
+Liczba_4: RST 4
+i_4: RPA
+Zgloszen_4: RST 8

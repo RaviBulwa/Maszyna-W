@@ -1,0 +1,86 @@
+SOB Program
+SOB PR1
+SOB PR2
+SOB PR3
+SOB PR4
+
+Program: POB Bok
+ŁAD i
+ŁAD j
+Petla_i: POB i
+SOZ Koniec
+ODE Jeden
+ŁAD i
+
+Petla_j: POB j
+SOZ Dalej
+ODE Jeden
+ŁAD j
+POB Małpa
+WYP 2
+SOB Petla_j
+
+Dalej: POB Bok
+ŁAD j
+POB Enter
+WYP 2
+SOB Petla_i
+
+Koniec: STP
+         
+
+i: RPA
+j: RPA
+Bok: RST 10
+Jeden: RST 1
+
+Enter: RST 13
+Małpa: RST '@'
+
+
+PR1: CZM Maska
+MAS 15
+DNS
+POB Znak_jeden
+WYP 2
+PZS
+MSK MASKA
+PWR
+
+PR2: CZM Maska
+MAS 15
+DNS
+POB Znak_jeden
+DOD Jeden
+WYP 2
+STP
+//
+PZS
+MSK MASKA
+PWR
+
+PR3: CZM Maska
+MAS 15
+DNS
+POB Znak_jeden
+DOD Jeden
+DOD Jeden
+WYP 2
+PZS
+MSK MASKA
+PWR
+
+PR4: CZM Maska
+MAS 15
+DNS
+POB Znak_jeden
+DOD Jeden
+DOD Jeden
+DOD Jeden
+WYP 2
+PZS
+MSK MASKA
+PWR
+
+Maska: RPA
+Znak_jeden: RST '1'
